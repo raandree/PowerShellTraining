@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+  <ViewDefinitions>
+          <View>
+            <Name>FileSizeReport</Name>
+            <ViewSelectedBy>
+                <TypeName>FileSizeReport</TypeName>
+            </ViewSelectedBy>
+
+            <TableControl>
+                <TableHeaders>
+                    <TableColumnHeader>
+                        <Label>Path</Label>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Label>FileCount</Label>
+						<Alignment>Right</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Label>Size</Label>
+                        <Alignment>Right</Alignment>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Label>MaxSize</Label>
+                        <Alignment>Right</Alignment>
+                    </TableColumnHeader>                    
+                </TableHeaders>
+                <TableRowEntries>
+                    <TableRowEntry>
+                        <TableColumnItems>
+                            <TableColumnItem>
+                                <PropertyName>Path</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>FileCount</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <ScriptBlock>$_.Size / 1GB</ScriptBlock>
+								<FormatString>{0:N2}</FormatString>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <ScriptBlock>$_.MaxSize / 1GB</ScriptBlock>
+								<FormatString>{0:N2}</FormatString>
+                            </TableColumnItem>                            
+                        </TableColumnItems>
+                    </TableRowEntry>
+                 </TableRowEntries>
+            </TableControl>
+        </View>
+  </ViewDefinitions>
+</Configuration>
