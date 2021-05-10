@@ -46,7 +46,7 @@ Write a PowerShell script that
     
     ```powershell
     Get-ChildItem -Path C:\Windows -File | 
-    Where Length -LT 100000 |
+    Where-Object Length -LT 100000 |
     Measure-Object -Property Length -Sum
     ```
 
