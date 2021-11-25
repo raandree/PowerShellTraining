@@ -459,7 +459,7 @@ Write a PowerShell script that
     
     More information on this topic: [About Functions Advanced Methods](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_functions_advanced_methods?view=powershell-7).
 
-    If these blocks are not defined, PowerShell defaults to 'End', which explains why we only see the last element. So we put the whole function code inside a process block to make sure it gets called for each element that is piped in:
+    > If these blocks are not defined, PowerShell defaults to 'End', which explains why we only see the last element. So we put the whole function code inside a process block to make sure it gets called for each element that is piped in:
 
     <details>
     <summary></summary>
