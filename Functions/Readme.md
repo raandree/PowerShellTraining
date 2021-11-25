@@ -171,7 +171,7 @@ Write a PowerShell script that
     ```
     </details>
 
-    >Note, that both call to 'Get-SmallFile' return the same result. The first calls uses the default value for 'MaxSize' as defined in the function, the second call explicitly overwrites the default with the same value as the default.
+    >Note, that both calls to 'Get-SmallFile' return the same result. The first call uses the default value for 'MaxSize' as defined in the function, the second call explicitly overwrites the default with the same value as the default.
 
 ***
 
