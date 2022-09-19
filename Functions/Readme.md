@@ -452,7 +452,7 @@ Write a PowerShell script that
     C:\Program Files  102400        
     ```
 
-    This is because the pipeline is actually kind of a foreach each loop and you have to tell PowerShell, which section in your function should be called for each object that is piped into the function. A pipeline aware function has three code blocks:
+    This is because the pipeline is actually kind of a foreach loop and you have to tell PowerShell, which section in your function should be called for each object that is piped into the function. A pipeline aware function has three code blocks:
     - Begin
     - Process
     - End
@@ -488,6 +488,7 @@ Write a PowerShell script that
                     Path        = $p
                     MaxSize     = $MaxSize
                     FileSizeSum = $result.Sum
+                    FileCount   = $result.Count
                     AverageSize  = [System.Math]::Round($result.Average, 2)
                 }
             }
