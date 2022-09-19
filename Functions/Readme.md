@@ -4,7 +4,7 @@
 
 We are creating a simple PowerShell script that grows and implements a lot of features that PowerShell provides for making functions flexible, robust, easy to read and self documenting.
 
-The purpose of the script is to find small files and return the sum of all these. We start listing all files, then measuring their content, then filtering out files that are not considered to be small and then we convert this into a function. The function will grow like this:
+The purpose of the script is to find small files and return the overall size of all these files. We start listing all files, then measuring their content, then filtering out files that are not considered to be small and then we convert this into a function. The function will grow like this:
 - the basics
 - implement parameters
   - that are type safe
