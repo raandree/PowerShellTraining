@@ -1,6 +1,6 @@
 # PowerShell Training Material
 
-## The evolution of a function
+## Functions: From one-liner to a full featured advanced function
 
 We are creating a simple PowerShell script that grows and implements a lot of features that PowerShell provides for making functions flexible, robust, easy to read and self documenting.
 
@@ -632,3 +632,7 @@ Write a PowerShell script that
     Get-Item -Path C:\Windows, 'C:\Program Files' | Get-SmallFile
     ```
     </details>
+
+16. Perfect, you are done. But, what if your next task is to get not only small files but also large ones. And then need to filter for older and untouched files. How many functions are you going to create? Is it possible to combine the requirements somehow to reduce the number of functions?
+
+We will see in the [Advanced Function Design with Parameter Sets](Advanced.md) section.
