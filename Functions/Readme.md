@@ -145,6 +145,7 @@ Write a PowerShell script that
 
 8. Making parameters mandatory and assigning default values makes the function easier to use and prevents errors.
    
+   Some parameters are important to the function to run. Hence, you want to force the caller to provide an argument for these important parameters. Without defining the path, the result of our function is not predictable. So,
    - Make the parameter 'Path' mandatory and 
    - Assign the parameter 'MaxSize' a default value of 100KB
 
