@@ -26,8 +26,8 @@
     
     xEnvironment ENVSetup2
     {
-        Name = 'IFSSYSTEM2'
-        Value =  'O:\IFSVS_IFS'
+        Name  = 'IFSSYSTEM2'
+        Value = 'O:\IFSVS_IFS'
     }
 
     NetworkInterfaceGlobalAutotuning GlobalAutotuning
@@ -35,9 +35,19 @@
         AutotuningMode = 'Normal'
     }
 
-    SingleInstanceInstall StandAlone { 
-        Server                    = $Node.Nodename
-        SetupSourcePath           = '\\server\share'
+    Script ODBCConfig
+    {
+        GetScript  = {
+            @{ Result = netsh interface tcp show global }
+        }
+        TestScript =
+        {
+           ((netsh interface tcp show global) | Select-String -Pattern 'Receive Window Auto-Tuning Level') -like '*disabled*'
+        }
+        SetScript  =
+        {
+            netsh interface tcp set global autotuning=disabled
+        }
     }
 
 }
